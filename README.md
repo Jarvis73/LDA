@@ -40,8 +40,8 @@ from loss import LinearDiscriminativeLoss
 loss_obj = LinearDiscriminativeLoss()
 
 with tf.GradientTape() as tape:
-	X_train, y_train = model(batch)
-	loss = loss_obj(X_train, y_train)
+    X_train, y_train = model(batch)
+    loss = loss_obj(X_train, y_train)
 grad = tape.gradient(loss, model.trainable_variables)
 optimizer.apply_gradients(zip(grad, model.trainable_variables))
 ```
@@ -81,9 +81,9 @@ print(loss)
 
 print(X.grad)
 # tensor([[ 0.0198,  0.0608],
-#		[ 0.0704,  0.2164],
-#		[-0.0276, -0.0848],
-#		[-0.0626, -0.1924]], dtype=torch.float64)
+#         [ 0.0704,  0.2164],
+#         [-0.0276, -0.0848],
+#         [-0.0626, -0.1924]], dtype=torch.float64)
 ```
 
 ### 2. Training with LDA loss
