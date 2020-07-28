@@ -141,3 +141,8 @@ plt.show()
 
 Plots: Color denotes classes.
 ![Plots](./images/Figure.png)
+
+
+## Reference
+* Paper: [Deep Linear Discriminant Analysis](http://arxiv.org/abs/1511.04707)
+* Theano Implementation: [https://github.com/CPJKU/deep_lda](https://github.com/CPJKU/deep_lda)
