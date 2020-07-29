@@ -203,6 +203,7 @@ class LinearDiscriminativeLoss(nn.Module):
                  lambda_val=1e-3,
                  name="linear_discriminative_analysis"):
         super(LinearDiscriminativeLoss, self).__init__()
+        self.lambda_value = lambda_val
 
     def forward(self, input, target):
-        return linear_discriminative_loss(target, input)
+        return linear_discriminative_loss(target, input, lambda_val=self.lambda_value)
